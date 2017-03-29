@@ -1,0 +1,28 @@
+form_person_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: FormPersonBundle:Default:index }
+
+form_person_index:
+    path:     /form/index
+    defaults: { _controller: FormPersonBundle:Person:index }
+
+form_person_add:
+    path:     /person/add
+    defaults: { _controller: FormPersonBundle:Person:add }
+
+form_person_create:
+    path:     /person/create
+    defaults: { _controller: FormPersonBundle:Person:create }
+    methods: POST
+
+form_person_index:
+    path:     /person/edit{id}
+    defaults: { _controller: FormPersonBundle:Person:edit }
+
+form_person_index:
+    path:     /person/view{id}
+    defaults: { _controller: FormPersonBundle:Person:view }
+
+form_person_index:
+    path:     /person/delete{id}
+    defaults: { _controller: FormPersonBundle:Person:delete }

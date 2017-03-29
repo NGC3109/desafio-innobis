@@ -1,0 +1,36 @@
+{% extends 'plantilla.html.twig' %}
+
+{% block body %}
+{{ parent() }}
+<table class="table">
+	<tr>
+		<th>Nombre</th>
+		<th>Apellido Paterno</th>
+		<th>Apellido Materno</th>
+		<th>Fecha Nacimiento</th>
+		<th>Nacionalidad</th>
+		<th>Genero</th>
+		<th>Problemas Cardiacos</th>
+		<th>Problemas Respiratorios</th>
+		<th>Hostiral Familiar</th>
+		<th>Acciones</th>
+	</tr>
+	{% for person in persons %}
+	<tr>
+		<td> {{ person.nombre }} </td>
+		<td> {{ person.apellidoPaterno }} </td>
+		<td> {{ person.apellidoMaterno }} </td>
+		<td> {{ person.fechaNacimiento | date('d:m:Y') }} </td>
+		<td> {{ person.nacionalidad }} </td>
+		<td> {{ person.genero }} </td>
+		<td> {{ person.pCardiaco }} </td>
+		<td> {{ person.pRespiratorio }} </td>
+		<td> {{ person.historialFamiliar }} </td>
+		<td>
+			<input type="button" name="btn-update" value="Editar">
+			<input type="button" name="btn-delete" value="Eliminar">
+		</td>
+	</tr>
+	{% endfor %}
+</table>
+{% endblock %}

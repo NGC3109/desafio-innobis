@@ -1,0 +1,66 @@
+{% extends 'plantilla.html.twig' %}
+
+{% block body %}
+{{ parent() }}
+<h2>Nueva Encuesta</h2>
+{{ form_start(form, { 'attr':{'role':'form'} }) }}
+<div class="form-group">
+{{ form_label(form.nombre) }}
+{{ form_widget(form.nombre, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Nombre' } }) }}
+<strong>{{ form_errors(form.nombre) }}</strong>
+</div>
+
+<div class="form-group">
+{{ form_label(form.apellidoPaterno) }}
+{{ form_widget(form.apellidoPaterno, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Apellido Paterno' } }) }}
+<strong>{{ form_errors(form.apellidoPaterno) }}</strong>
+</div>
+
+<div class="form-group">
+{{ form_label(form.apellidoMaterno) }}
+{{ form_widget(form.apellidoMaterno, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Apellido Materno' } }) }}
+<strong>{{ form_errors(form.apellidoMaterno) }}</strong>
+</div>
+
+<div class="form-group">
+{{ form_label(form.fechaNacimiento) }}
+{{ form_widget(form.fechaNacimiento, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Fecha Nacimiento' } }) }}
+<strong>{{ form_errors(form.fechaNacimiento) }}</strong>
+</div>
+
+<div class="form-group">
+{{ form_label(form.nacionalidad) }}
+{{ form_widget(form.nacionalidad, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Nacionalidad' } }) }}
+<strong>{{ form_errors(form.nacionalidad) }}</strong>
+</div>
+
+<div class="form-group">
+{{ form_label(form.genero) }}
+{{ form_widget(form.genero, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Genero' } }) }}
+<strong>{{ form_errors(form.genero) }}</strong>
+</div>
+
+<div class="form-group">
+{{ form_label(form.pCardiaco) }}
+{{ form_widget(form.pCardiaco, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Problemas Cardiacos' } }) }}
+<strong>{{ form_errors(form.pCardiaco) }}</strong>
+</div>
+
+<div class="form-group">
+{{ form_label(form.pRespiratorio) }}
+{{ form_widget(form.pRespiratorio, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Problemas Respiratorios' } }) }}
+<strong>{{ form_errors(form.pRespiratorio) }}</strong>
+</div>
+
+<div class="form-group">
+{{ form_label(form.historialFamiliar) }}
+{{ form_widget(form.historialFamiliar, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Historial Familiar' } }) }}
+<strong>{{ form_errors(form.historialFamiliar) }}</strong>
+</div>
+
+<br />
+
+<input type="submit" value="Finalizar Encuesta" name="">
+
+{{ form_end(form) }}
+{% endblock body %}
